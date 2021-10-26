@@ -11,4 +11,4 @@ LATEST_TAG_SHORT=$(echo "${LATEST_TAG//v}")
 
 # PS: It is a prerequisite to execute 'docker login' before running this script
 # docker tag ${DOCKER_REPO}:${GIT_COMMIT} ${DOCKER_REPO}:${LATEST_TAG_SHORT}
-docker image push --all-tags
+docker push ${DOCKER_REPO} --all-tags
